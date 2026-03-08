@@ -1,0 +1,71 @@
+[config]
+reload_apps = true
+set_wallpaper = false
+
+[templates.waybar]
+input_path  = "~/.config/matugen/templates/waybar.css"
+output_path = "~/.config/waybar/colors.css"
+
+[templates.hyprland]
+input_path  = "~/.config/matugen/templates/hyprland-colors.conf"
+output_path = "~/.config/hypr/colors.conf"
+
+[templates.hyprlock]
+input_path  = "~/.config/matugen/templates/hyprlock.conf"
+output_path = "~/.config/hypr/hyprlock.conf"
+
+[templates.swaylock]
+input_path  = "~/.config/matugen/templates/swaylock"
+output_path = "~/.config/swaylock/config"
+
+[templates.kitty]
+input_path  = "~/.config/matugen/templates/kitty.conf"
+output_path = "~/.config/kitty/colors.conf"
+
+[templates.alacritty]
+input_path  = "~/.config/matugen/templates/alacritty.toml"
+output_path = "~/.config/alacritty/colors.toml"
+
+[templates.wofi]
+input_path  = "~/.config/matugen/templates/wofi.css"
+output_path = "~/.config/wofi/colors.css"
+
+[templates.rofi]
+input_path  = "~/.config/matugen/templates/rofi-colors.rasi"
+output_path = "~/.config/rofi/colors.rasi"
+
+[templates.fuzzel]
+input_path  = "~/.config/matugen/templates/fuzzel.ini"
+output_path = "~/.config/fuzzel/colors.ini"
+
+[templates.dunst]
+input_path  = "~/.config/matugen/templates/dunst.conf"
+output_path = "~/.config/dunst/dunstrc"
+
+[templates.swaync]
+input_path  = "~/.config/matugen/templates/swaync.css"
+output_path = "~/.config/swaync/style.css"
+
+[templates.wlogout]
+input_path  = "~/.config/matugen/templates/wlogout.css"
+output_path = "~/.config/wlogout/style.css"
+
+[templates.btop]
+input_path  = "~/.config/matugen/templates/btop.theme"
+output_path = "~/.config/btop/themes/matugen.theme"
+
+[templates.cava]
+input_path  = "~/.config/matugen/templates/cava.conf"
+output_path = "~/.config/cava/config"
+
+[templates.starship]
+input_path  = "~/.config/matugen/templates/starship.toml"
+output_path = "~/.config/starship.toml"
+
+[templates.dolphin]
+input_path  = "~/.config/matugen/templates/dolphin.css"
+output_path = "~/.local/share/color-schemes/matugen.colors"
+
+[templates.gtk]
+input_path  = "~/.config/matugen/templates/gtk.css"
+output_path = "~/.config/gtk-4.0/gtk.css"

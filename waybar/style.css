@@ -1,0 +1,158 @@
+@import "colors.css";
+
+* {
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 12px;
+    font-weight: 500;
+    color: @on_surface;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+tooltip {
+    background: alpha(@surface, 0.96);
+    border: 1px solid alpha(@outline, 0.2);
+    border-radius: 10px;
+    color: @on_surface;
+    padding: 4px 8px;
+}
+
+/* ── Workspaces ─────────────────────────────────────────────────── */
+
+#workspaces {
+    background: alpha(@surface, 0.65);
+    border-radius: 12px;
+    padding: 0 4px;
+    margin: 5px 6px 5px 0;
+}
+
+#workspaces button {
+    color: alpha(@on_surface, 0.35);
+    background: transparent;
+    border-radius: 8px;
+    padding: 2px 9px;
+    margin: 3px 1px;
+    min-width: 20px;
+    transition: all 0.15s ease;
+    font-size: 11px;
+}
+
+#workspaces button:hover {
+    color: @on_surface;
+    background: alpha(@primary, 0.1);
+}
+
+#workspaces button.active {
+    color: @on_primary;
+    background: @primary;
+    font-weight: bold;
+}
+
+#workspaces button.urgent {
+    color: @on_error;
+    background: @error;
+}
+
+/* ── Window title ───────────────────────────────────────────────── */
+
+#window {
+    background: alpha(@surface, 0.65);
+    border-radius: 12px;
+    padding: 0 14px;
+    margin: 5px 0;
+    color: alpha(@on_surface, 0.7);
+    font-size: 11px;
+}
+
+#window:empty {
+    background: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+/* ── Clock ──────────────────────────────────────────────────────── */
+
+#clock {
+    background: alpha(@surface, 0.65);
+    border-radius: 12px;
+    padding: 0 16px;
+    margin: 5px 0;
+    color: @on_surface;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* ── MPRIS ──────────────────────────────────────────────────────── */
+
+#mpris {
+    background: alpha(@surface, 0.65);
+    border-radius: 12px;
+    padding: 0 14px;
+    margin: 5px 6px 5px 0;
+    color: alpha(@on_surface, 0.6);
+    font-size: 11px;
+}
+
+#mpris.playing {
+    color: @primary;
+}
+
+/* ── Status group (audio + network + battery) ───────────────────── */
+
+#pulseaudio,
+#network,
+#battery {
+    background: alpha(@surface, 0.65);
+    padding: 0 10px;
+    margin: 5px 0;
+}
+
+#pulseaudio {
+    border-radius: 12px 0 0 12px;
+    padding-left: 14px;
+    color: alpha(@on_surface, 0.7);
+    border-right: 1px solid alpha(@outline, 0.1);
+}
+
+#pulseaudio.muted {
+    color: alpha(@outline, 0.5);
+}
+
+#network {
+    color: alpha(@on_surface, 0.7);
+    border-right: 1px solid alpha(@outline, 0.1);
+}
+
+#network.disconnected {
+    color: alpha(@outline, 0.4);
+}
+
+#battery {
+    border-radius: 0 12px 12px 0;
+    padding-right: 14px;
+    color: alpha(@on_surface, 0.7);
+}
+
+#battery.warning { color: @tertiary; }
+#battery.critical { color: @error; animation: blink 1s steps(2) infinite; }
+#battery.charging { color: @secondary; }
+#battery.full { color: alpha(@on_surface, 0.4); }
+
+@keyframes blink { to { opacity: 0.3; } }
+
+/* ── Tray ───────────────────────────────────────────────────────── */
+
+#tray {
+    background: alpha(@surface, 0.65);
+    border-radius: 12px;
+    padding: 0 10px;
+    margin: 5px 0 5px 6px;
+}
+
+#tray > .passive { -gtk-icon-effect: dim; }
+#tray > .needs-attention { -gtk-icon-effect: highlight; }

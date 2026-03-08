@@ -1,0 +1,101 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+        "type": "auto",
+	"source": "~/.config/fastfetch/wolf.png",
+	"width": 30,
+	"padding": {
+	"top": 3,
+	"left": 2,
+	},
+    },
+    "modules": [
+        "break",
+	{
+            "type": "custom",
+            "format": "Solesse"
+        },
+	{
+            "type": "custom",
+            "format": "----------"
+        },
+        {
+            "type": "custom",
+            "format": "\u001b[90m┌───────────────────────────────────────────────┐"
+        },
+        {
+            "type": "os",
+	    "format": "{2}",
+            "key": "  distro",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "kernel",
+            "key": "  system",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "packages",
+            "key": "󰏗  packages",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "custom",
+            "format": "\u001b[90m└───────────────────────────────────────────────┘"
+        },
+
+	"break",
+        {
+            "type": "custom",   
+            "format": "\u001b[90m┌───────────────────────────────────────────────┐"
+        },
+        {
+            "type": "cpu",
+            "key": "  cpu",
+            "keyColor": "green",
+	    "format": "{vendor} {name}"
+        },
+        {
+            "type": "gpu",
+            "key": "󰢮  gpu",
+            "keyColor": "green",
+	    "format": "{vendor} {name}",
+        },
+        {
+            "type": "memory",
+            "key": "  ram",
+            "keyColor": "green"
+        },
+        {
+            "type": "custom",
+            "format": "\u001b[90m└───────────────────────────────────────────────┘"
+        },
+
+        "break",
+        {
+            "type": "custom",
+            "format": "\u001b[90m┌───────────────────────────────────────────────┐"
+        },
+        {
+            "type": "uptime",
+            "key": "  uptime",
+            "keyColor": "magenta"
+        },
+        {
+            "type": "datetime",
+            "key": "  date",
+            "keyColor": "magenta",
+	    "format": "{day-in-month}.{month-pretty}.{year} {hour-pretty}:{minute-pretty}",
+        },
+	{
+            "type": "custom",
+            "format": "\u001b[90m└───────────────────────────────────────────────┘"
+        },
+        {
+            "type": "custom",
+            "format": "\u001b[31m⬤ \u001b[32m⬤ \u001b[33m⬤ \u001b[34m⬤ \u001b[35m⬤ \u001b[36m⬤\u001b[0m"
+        },
+
+        "break"
+    ]
+}

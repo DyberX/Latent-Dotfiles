@@ -1,0 +1,20 @@
+# Generated color files — matugen regenerates these from your wallpaper
+hypr/colors.conf
+hypr/hyprlock.conf
+waybar/colors.css
+kitty/colors.conf
+dunst/dunstrc
+fuzzel/colors.ini
+swaync/style.css
+cava/config
+gtk-3.0/colors.css
+gtk-4.0/gtk.css
+
+# Machine-specific
+hypr/monitors.conf
+hypr/workspaces.conf
+
+# State / cache
+**/.theme-state.json
+**/*.log
+**/*.bak
